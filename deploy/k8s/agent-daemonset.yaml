@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: coverage-agent
+spec:
+  selector:
+    matchLabels:
+      app: coverage-agent
+  template:
+    metadata:
+      labels:
+        app: coverage-agent
+    spec:
+      hostPID: true
+      containers:
+        - name: agent
+          image: your-registry/coverage-agent:latest
+          args: ["-config", "/etc/translator/agent.hcl"]
+          securityContext:
+            privileged: true

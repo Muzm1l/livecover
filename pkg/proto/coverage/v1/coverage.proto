@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package coverage.v1;
+
+option go_package = "translator/pkg/proto/coverage/v1;coveragev1";
+
+message FunctionMeta {
+  string build_id = 1;
+  uint64 func_id = 2;
+  string name = 3;
+  string package = 4;
+  string file = 5;
+  uint32 line = 6;
+  string confidence = 7;
+}
+
+message HitEvent {
+  string node_id = 1;
+  string service = 2;
+  string build_id = 3;
+  uint32 pid = 4;
+  uint64 func_id = 5;
+  uint64 ts_unix_nano = 6;
+  uint32 cpu = 7;
+}
+
+message HitBatch {
+  repeated HitEvent events = 1;
+}
+
+message IngestAck {
+  uint64 accepted = 1;
+  uint64 dropped = 2;
+  string reason = 3;
+}
+
+message CoverageDelta {
+  string service = 1;
+  string build_id = 2;
+  uint64 func_id = 3;
+  int64 bucket_unix = 4;
+  uint32 hits = 5;
+}
+
+service IngestService {
+  rpc Push(HitBatch) returns (IngestAck);
+}

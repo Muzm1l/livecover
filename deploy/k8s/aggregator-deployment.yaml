@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coverage-aggregator
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: coverage-aggregator
+  template:
+    metadata:
+      labels:
+        app: coverage-aggregator
+    spec:
+      containers:
+        - name: aggregator
+          image: your-registry/coverage-aggregator:latest
+          args: ["-config", "/etc/translator/aggregator.hcl"]
+          ports:
+            - containerPort: 8080
+            - containerPort: 9090
