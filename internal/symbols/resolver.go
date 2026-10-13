@@ -1,6 +1,6 @@
 package symbols
 
-import "translator/internal/model"
+import "livecover/internal/model"
 
 type Resolver interface {
 	Resolve(exePath string, buildID string) ([]model.FunctionSymbol, error)

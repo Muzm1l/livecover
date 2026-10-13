@@ -9,10 +9,10 @@ import (
 
 	"github.com/gorilla/websocket"
 
-	"translator/internal/agg"
-	"translator/internal/config"
-	"translator/internal/logging"
-	"translator/internal/model"
+	"livecover/internal/agg"
+	"livecover/internal/config"
+	"livecover/internal/logging"
+	"livecover/internal/model"
 )
 
 func main() {

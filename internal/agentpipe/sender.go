@@ -3,7 +3,7 @@ package agentpipe
 import (
 	"context"
 
-	"translator/internal/model"
+	"livecover/internal/model"
 )
 
 type Sender interface {

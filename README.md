@@ -1,6 +1,8 @@
-# Live Coverage Server (Go + eBPF)
+# Livecover
 
-This repository is a starter implementation scaffold for a live production code coverage system:
+Live production code coverage — see which functions actually run in prod (Go + eBPF).
+
+This repository is a starter implementation scaffold for Livecover:
 
 - `agent`: host daemon that discovers processes, resolves symbols, and emits function hit events.
 - `aggregator`: ingests events, builds coverage rollups, and serves API/WebSocket streams.

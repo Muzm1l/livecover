@@ -3,7 +3,7 @@ package agg
 import (
 	"context"
 
-	"translator/internal/model"
+	"livecover/internal/model"
 )
 
 type Engine interface {

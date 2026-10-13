@@ -8,7 +8,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"translator/internal/model"
+	"livecover/internal/model"
 )
 
 type bucketKey struct {

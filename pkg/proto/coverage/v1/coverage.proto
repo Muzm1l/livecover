@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package coverage.v1;
 
-option go_package = "translator/pkg/proto/coverage/v1;coveragev1";
+option go_package = "livecover/pkg/proto/coverage/v1;coveragev1";
 
 message FunctionMeta {
   string build_id = 1;

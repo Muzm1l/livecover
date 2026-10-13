@@ -3,7 +3,7 @@ package bpf
 import (
 	"context"
 
-	"translator/internal/model"
+	"livecover/internal/model"
 )
 
 type Manager interface {

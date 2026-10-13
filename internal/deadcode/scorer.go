@@ -1,6 +1,6 @@
 package deadcode
 
-import "translator/internal/model"
+import "livecover/internal/model"
 
 type Candidate struct {
 	Service    string

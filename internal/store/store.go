@@ -3,7 +3,7 @@ package store
 import (
 	"context"
 
-	"translator/internal/model"
+	"livecover/internal/model"
 )
 
 type Store interface {

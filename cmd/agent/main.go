@@ -6,10 +6,10 @@ import (
 	"os"
 	"time"
 
-	"translator/internal/agentpipe"
-	"translator/internal/config"
-	"translator/internal/logging"
-	"translator/internal/model"
+	"livecover/internal/agentpipe"
+	"livecover/internal/config"
+	"livecover/internal/logging"
+	"livecover/internal/model"
 )
 
 func main() {

@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  name: coverage-agent
+  name: livecover-agent
 spec:
   selector:
     matchLabels:
-      app: coverage-agent
+      app: livecover-agent
   template:
     metadata:
       labels:
-        app: coverage-agent
+        app: livecover-agent
     spec:
       hostPID: true
       containers:
         - name: agent
-          image: your-registry/coverage-agent:latest
-          args: ["-config", "/etc/translator/agent.hcl"]
+          image: your-registry/livecover-agent:latest
+          args: ["-config", "/etc/livecover/agent.hcl"]
           securityContext:
             privileged: true

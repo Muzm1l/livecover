@@ -1,10 +1,10 @@
 [Unit]
-Description=Live Coverage Aggregator
+Description=Livecover Aggregator
 After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/aggregator -config /etc/translator/aggregator.hcl
+ExecStart=/usr/local/bin/aggregator -config /etc/livecover/aggregator.hcl
 Restart=always
 RestartSec=3
 

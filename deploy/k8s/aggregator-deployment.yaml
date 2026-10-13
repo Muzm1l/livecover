@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: coverage-aggregator
+  name: livecover-aggregator
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: coverage-aggregator
+      app: livecover-aggregator
   template:
     metadata:
       labels:
-        app: coverage-aggregator
+        app: livecover-aggregator
     spec:
       containers:
         - name: aggregator
-          image: your-registry/coverage-aggregator:latest
-          args: ["-config", "/etc/translator/aggregator.hcl"]
+          image: your-registry/livecover-aggregator:latest
+          args: ["-config", "/etc/livecover/aggregator.hcl"]
           ports:
             - containerPort: 8080
             - containerPort: 9090

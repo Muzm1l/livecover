@@ -1,4 +1,4 @@
-module translator
+module livecover
 
 go 1.22
 

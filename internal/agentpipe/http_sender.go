@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"time"
 
-	"translator/internal/model"
+	"livecover/internal/model"
 )
 
 type HTTPSender struct {

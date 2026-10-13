@@ -3,7 +3,7 @@ package discovery
 import (
 	"context"
 
-	"translator/internal/model"
+	"livecover/internal/model"
 )
 
 type Watcher interface {

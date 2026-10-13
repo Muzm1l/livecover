@@ -1,10 +1,10 @@
 [Unit]
-Description=Live Coverage Agent
+Description=Livecover Agent
 After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/agent -config /etc/translator/agent.hcl
+ExecStart=/usr/local/bin/agent -config /etc/livecover/agent.hcl
 Restart=always
 RestartSec=3
 
